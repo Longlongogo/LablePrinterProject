@@ -9,12 +9,14 @@
         xmlns:LablePrintProject="clr-namespace:LablePrintProject"
         Title="Material Design in XAML" Height="800" Width="1100"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
+        TextElement.FontWeight="Black"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{StaticResource MaterialDesignFont}" Icon="Resources\avg_16px.ico">
+        FontFamily="{StaticResource MaterialDesignFont}" Icon="Resources\avg_16px.ico"
+        WindowState="Normal"
+        WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

@@ -40,8 +40,8 @@
                      Margin="0,6,-50,0"
                      materialDesign:HintAssist.Hint="密码" FontSize="18"
                      Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2" 
-                    Margin="50 16 0 0">
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                    Margin="60 16 0 0">
             <Button IsDefault="True" Style="{DynamicResource MaterialDesignFlatButton}"
                     Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
                 <Button.CommandParameter>

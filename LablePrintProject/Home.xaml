@@ -39,6 +39,7 @@
                 </Button>
             </StackPanel>
         </Grid>
+
         <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Bottom"
@@ -49,21 +50,22 @@
                         <Grid VerticalAlignment="Stretch" >
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="100" />
-                                <RowDefinition Height="100" /> 
-                                <RowDefinition Height="100" /> 
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="100" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="200" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Image Source="Resources/NormalPrint.jpeg" Grid.RowSpan="2" StretchDirection="Both" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+                            <!--<Image Source="Resources/NormalPrint.jpeg" Grid.RowSpan="2" StretchDirection="Both" VerticalAlignment="Stretch" Stretch="UniformToFill" />-->
+                            <materialDesign:PackIcon Kind="Book" Width="160" Height="160" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <StackPanel  Grid.Column="1">
                                 <TextBlock Grid.Column="1" Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="16 16 16 2">常规标签</TextBlock>
                                 <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBodyLight}"
-                                       VerticalAlignment="Center">常规标签打印！</TextBlock> 
+                                       VerticalAlignment="Center">常规标签打印！</TextBlock>
                             </StackPanel>
                             <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBodyLight}"
-                                       VerticalAlignment="Bottom"> </TextBlock>
+                                       VerticalAlignment="Bottom"></TextBlock>
                         </Grid>
                     </materialDesign:Card>
                     <materialDesign:Card Width="420" Margin="8 2 4 16" Height="270">
@@ -88,11 +90,11 @@
                                             DockPanel.Dock="Right"
                                             x:Name="LogInButton" Click="LogInButton_OnClick">
                                         <StackPanel Orientation="Horizontal">
-                                            <materialDesign:PackIcon Kind="Gift" />
+                                            <materialDesign:PackIcon Kind="Qqchat" />
                                             <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">登 录</TextBlock>
                                         </StackPanel>
                                     </Button>
-                                    <TextBlock Foreground="{DynamicResource MaterialDesignBodyLight}" TextWrapping="Wrap" Margin="16" VerticalAlignment="Center"> </TextBlock>
+                                    <TextBlock Foreground="{DynamicResource MaterialDesignBodyLight}" TextWrapping="Wrap" Margin="16" VerticalAlignment="Center"></TextBlock>
                                 </DockPanel>
                             </Border>
                         </Grid>
