@@ -22,7 +22,8 @@ namespace LablePrintProject.Domain
 
         public ICommand RunDialogCommand => new AnotherCommandImplementation(ExecuteRunDialog);
 
-        public ICommand RunExtendedDialogCommand => new AnotherCommandImplementation(ExecuteRunExtendedDialog);
+        public ICommand RunExtendedDialogCommand => new AnotherCommandImplementation(ExecuteRunExtendedDialog); 
+         
 
         private async void ExecuteRunDialog(object o)
         {

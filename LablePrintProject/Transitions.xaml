@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:transitionsDemo="clr-namespace:LablePrintProject.TransitionsDemo"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    
+             d:DesignHeight="390" d:DesignWidth="700">
+
     <transitionsDemo:TransitionsDemoHome />
 </UserControl>

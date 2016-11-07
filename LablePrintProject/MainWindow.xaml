@@ -38,12 +38,12 @@
     <materialDesign:DialogHost Identifier="RootDialog">
         <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
             <materialDesign:DrawerHost.LeftDrawerContent>
-                <DockPanel MinWidth="212">
+                <DockPanel MinWidth="200">
                     <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
                                   DockPanel.Dock="Top"
-                                  HorizontalAlignment="Right" Margin="16"
+                                  HorizontalAlignment="Left" Margin="16"
                                   IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />                    
-                    <ListBox x:Name="DemoItemsListBox" Margin="0 16 0 16" SelectedIndex="0"                         
+                    <ListBox x:Name="DemoItemsListBox" Margin="0 16 0 16" SelectedIndex="0"  
                              PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp">
                         <ListBox.ItemTemplate>
                             <DataTemplate DataType="domain:DemoItem">
@@ -52,7 +52,7 @@
                         </ListBox.ItemTemplate>
                         <domain:DemoItem Name="Home">
                             <domain:DemoItem.Content>
-                                <wpfExample:Home />
+                                <wpfExample:HomeHome />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
                         <domain:DemoItem Name="Palette">
@@ -204,7 +204,7 @@
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">标签打印软件</TextBlock>
                     </DockPanel>
                 </materialDesign:ColorZone>
-                <ContentControl Margin="16" Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />                
+                <ContentControl Margin="16" Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />
             </DockPanel>
         </materialDesign:DrawerHost>
     </materialDesign:DialogHost>
