@@ -104,7 +104,7 @@
         </ScrollViewer>
         <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
                                  HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                                 Margin="32" Grid.Row="1">
+                                 Margin="32" Grid.Row="1" PopupMode ="Click">
             <StackPanel>
                 <Button ToolTip="GitHub" Click="GitHubButton_OnClick">
                     <materialDesign:PackIcon Kind="GithubCircle" Height="20" Width="20" />
