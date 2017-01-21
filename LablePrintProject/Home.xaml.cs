@@ -21,9 +21,9 @@ namespace LablePrintProject
     /// <summary>
     /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class HomeHome : UserControl
+    public partial class Home : UserControl
     {
-        public HomeHome()
+        public Home()
         {
             InitializeComponent();
         }

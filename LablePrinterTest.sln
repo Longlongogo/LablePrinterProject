@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesignDemo", "MainDemo.Wpf\MaterialDesignDemo.csproj", "{CF0A27A8-EF82-44E5-B673-ECCC150C48ED}"
 EndProject
@@ -132,7 +132,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CF0A27A8-EF82-44E5-B673-ECCC150C48ED} = {D34BE232-DE51-43C1-ABDC-B69003BB50FF}
 		{803954E5-3A35-4D8B-95A7-F6E9B63EC0DF} = {D34BE232-DE51-43C1-ABDC-B69003BB50FF}
-		{8B72A107-557C-4B3D-BAE3-2C59787F7E62} = {D34BE232-DE51-43C1-ABDC-B69003BB50FF}
 		{5B09DAAA-BCCB-4405-98E2-2FF25C47146B} = {D34BE232-DE51-43C1-ABDC-B69003BB50FF}
 	EndGlobalSection
 EndGlobal

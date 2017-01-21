@@ -79,6 +79,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="appWindows\ucDepartmentManage.xaml.cs">
+      <DependentUpon>ucDepartmentManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appWindows\ucReport.xaml.cs">
+      <DependentUpon>ucReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appWindows\ucUsersManage.xaml.cs">
+      <DependentUpon>ucUsersManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appWindows\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Buttons.xaml.cs">
       <DependentUpon>Buttons.xaml</DependentUpon>
     </Compile>
@@ -164,6 +176,9 @@
     <Compile Include="Sliders.xaml.cs">
       <DependentUpon>Sliders.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Test\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TextFields.xaml.cs">
       <DependentUpon>TextFields.xaml</DependentUpon>
     </Compile>
@@ -204,6 +219,22 @@
     <Compile Include="Typography.xaml.cs">
       <DependentUpon>Typography.xaml</DependentUpon>
     </Compile>
+    <Page Include="appWindows\ucDepartmentManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="appWindows\ucReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="appWindows\ucUsersManage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="appWindows\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Buttons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -309,6 +340,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Sliders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test\UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -428,6 +463,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ExtendPrint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\avg_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\printer_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cycle_32px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

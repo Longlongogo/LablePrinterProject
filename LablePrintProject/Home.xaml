@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="LablePrintProject.HomeHome"
+﻿<UserControl x:Class="LablePrintProject.Home"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -27,7 +27,7 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Image Source="Resources/avg_128px.png" Stretch="Uniform" Width="100" Height="100" />
+            <Image Source="Resources/AVG_128px.png" Stretch="Uniform" Width="100" Height="100" />
             <StackPanel Grid.Column="1" Margin="24 0 0 0" VerticalAlignment="Center">
                 <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap">新华标签打印软件</TextBlock>
                 <Button Style="{StaticResource MaterialDesignFlatButton}"
@@ -64,8 +64,7 @@
                                 <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBodyLight}"
                                        VerticalAlignment="Center">常规标签打印！</TextBlock>
                             </StackPanel>
-                            <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBodyLight}"
-                                       VerticalAlignment="Bottom"></TextBlock>
+                             
                         </Grid>
                     </materialDesign:Card>
                     <materialDesign:Card Width="420" Margin="8 2 4 16" Height="270">

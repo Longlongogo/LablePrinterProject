@@ -25,9 +25,10 @@ namespace LablePrintProject
             while (dependencyObject != null)
             {
                 if (dependencyObject is ScrollBar) return;
+                if (dependencyObject is ListBox)
+                    tbTitle.Text = ((LablePrintProject.Domain.DemoItem)(((ListBox)dependencyObject).SelectedItem)).Name;
                 dependencyObject = VisualTreeHelper.GetParent(dependencyObject);
             }
-
             MenuToggleButton.IsChecked = false;
         }
 
@@ -35,10 +36,10 @@ namespace LablePrintProject
         {
             var sampleMessageDialog = new SampleMessageDialog
             {
-                Message = {Text = ((ButtonBase) sender).Content.ToString()}
+                Message = { Text = ((ButtonBase)sender).Content.ToString() }
             };
 
-            await DialogHost.Show(sampleMessageDialog, "RootDialog");            
+            await DialogHost.Show(sampleMessageDialog, "RootDialog");
         }
-    } 
+    }
 }

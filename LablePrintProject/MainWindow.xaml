@@ -3,18 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
         xmlns:wpfExample="clr-namespace:LablePrintProject"
         xmlns:domain="clr-namespace:LablePrintProject.Domain"
+        xmlns:appWindow="clr-namespace:LablePrintProject.appWindows"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:domain1="clr-namespace:LablePrintProject.Domain"
-        xmlns:LablePrintProject="clr-namespace:LablePrintProject"
-        Title="Material Design in XAML" Height="800" Width="1100"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  
+        Title="标签打印软件" Height="800" Width="1100"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Black"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{StaticResource MaterialDesignFont}" Icon="Resources\avg_16px.ico"
+        FontFamily="{StaticResource MaterialDesignFont}" 
+        Icon="Resources\avg_32px.ico"
         WindowState="Normal"
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
@@ -52,12 +52,12 @@
                                 <TextBlock Text="{Binding Name}" Margin="32 0 32 0" />
                             </DataTemplate>
                         </ListBox.ItemTemplate>
-                        <domain:DemoItem Name="Home">
+                        <domain:DemoItem Name="主页">
                             <domain:DemoItem.Content>
-                                <wpfExample:HomeHome />
+                                <wpfExample:Home />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Palette">
+                        <domain:DemoItem Name="常规标签">
                             <domain:DemoItem.Content>
                                 <wpfExample:PaletteSelector>
                                     <wpfExample:PaletteSelector.DataContext>
@@ -66,17 +66,17 @@
                                 </wpfExample:PaletteSelector>
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Buttons &amp; Toggles">
+                        <domain:DemoItem Name="外来器械">
                             <domain:DemoItem.Content>
                                 <wpfExample:Buttons />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Fields">
+                        <domain:DemoItem Name="器械信息维护">
                             <domain:DemoItem.Content>
                                 <wpfExample:TextFields />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Pickers">
+                        <domain:DemoItem Name="消毒包信息维护">
                             <domain:DemoItem.Content>
                                 <wpfExample:Pickers>
                                     <wpfExample:Pickers.DataContext>
@@ -85,41 +85,32 @@
                                 </wpfExample:Pickers>
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Sliders">
+                        <domain:DemoItem Name="灭菌方式维护">
                             <domain:DemoItem.Content>
                                 <wpfExample:Sliders />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Chips">
+                        <domain:DemoItem Name="科室维护">
                             <domain:DemoItem.Content>
-                                <wpfExample:Chips />
+                                <appWindow:ucDepartmentManage />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Typography">
+                        <domain:DemoItem Name="人员维护"  >
                             <domain:DemoItem.Content>
-                                <wpfExample:Typography />
+                                <appWindow:ucUsersManage />
+                            </domain:DemoItem.Content> 
+                        </domain:DemoItem> 
+                        <domain:DemoItem Name="报表统计">
+                            <domain:DemoItem.Content>
+                                <appWindow:ucReport />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Cards">
-                            <domain:DemoItem.Content>
-                                <wpfExample:Cards />
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Icon Pack">
-                            <domain:DemoItem.Content>
-                                <LablePrintProject:IconPack>
-                                    <LablePrintProject:IconPack.DataContext>
-                                        <LablePrintProject:IconPackViewModel />
-                                    </LablePrintProject:IconPack.DataContext>
-                                </LablePrintProject:IconPack>
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Colour Zones">
+                        <domain:DemoItem Name="打印设置">
                             <domain:DemoItem.Content>
                                 <wpfExample:ColorZones />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Lists">
+                        <domain:DemoItem Name="修改密码">
                             <domain:DemoItem.Content>
                                 <wpfExample:Lists>
                                     <wpfExample:Lists.DataContext>
@@ -128,63 +119,7 @@
                                 </wpfExample:Lists>
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <domain:DemoItem Name="Trees">
-                            <domain:DemoItem.Content>
-                                <wpfExample:Trees>
-                                    <wpfExample:Trees.DataContext>
-                                        <domain:TreesViewModel/>
-                                    </wpfExample:Trees.DataContext>
-                                </wpfExample:Trees>
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Grids">
-                            <domain:DemoItem.Content>
-                                <wpfExample:Grids>
-                                    <wpfExample:Grids.DataContext>
-                                        <domain:ListsAndGridsViewModel />
-                                    </wpfExample:Grids.DataContext>
-                                </wpfExample:Grids>
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Expander">
-                            <domain:DemoItem.Content>
-                                <wpfExample:Expander />
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Group Boxes">
-                            <domain:DemoItem.Content>
-                                <wpfExample:GroupBoxes />
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Menus &amp; Tool Bars">
-                            <domain:DemoItem.Content>
-                                <wpfExample:MenusAndToolBars />
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Progress Indicators">
-                            <domain:DemoItem.Content>
-                                <wpfExample:Progress />
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Dialogs">
-                            <domain:DemoItem.Content>
-                                <wpfExample:Dialogs>
-                                    <wpfExample:Dialogs.DataContext>
-                                        <domain1:DialogsViewModel />
-                                    </wpfExample:Dialogs.DataContext>
-                                </wpfExample:Dialogs>
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Transitions">
-                            <domain:DemoItem.Content>
-                                <LablePrintProject:Transitions />
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
-                        <domain:DemoItem Name="Shadows">
-                            <domain:DemoItem.Content>
-                                <wpfExample:Shadows />
-                            </domain:DemoItem.Content>
-                        </domain:DemoItem>
+                        <TextBlock>退出</TextBlock>
                     </ListBox>
                 </DockPanel>
             </materialDesign:DrawerHost.LeftDrawerContent>
@@ -203,7 +138,7 @@
                                 <Button Content="Goodbye" Click="MenuPopupButton_OnClick"/>                                
                             </StackPanel>
                         </materialDesign:PopupBox>
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">标签打印软件</TextBlock>
+                        <TextBlock x:Name="tbTitle" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">标签打印软件</TextBlock>
                     </DockPanel>
                 </materialDesign:ColorZone>
                 <ContentControl Margin="16" Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />
