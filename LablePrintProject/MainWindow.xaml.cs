@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using LablePrintProject.Domain;
 using MaterialDesignThemes.Wpf;
+using System.Diagnostics;
 
 namespace LablePrintProject
 {
@@ -40,6 +41,16 @@ namespace LablePrintProject
             };
 
             await DialogHost.Show(sampleMessageDialog, "RootDialog");
+        }
+
+        private void ChatButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://www.shinva.net/");
+        }
+
+        private void EmailButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Process.Start("mailto://shaochenglong@shinva.com");
         }
     }
 }

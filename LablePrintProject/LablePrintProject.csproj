@@ -82,14 +82,32 @@
     <Compile Include="appWindows\ucDepartmentManage.xaml.cs">
       <DependentUpon>ucDepartmentManage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="appWindows\ucInstrumentManage.xaml.cs">
+      <DependentUpon>ucInstrumentManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appWindows\ucPackageManage.xaml.cs">
+      <DependentUpon>ucPackageManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appWindows\ucPrintExternal.xaml.cs">
+      <DependentUpon>ucPrintExternal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appWindows\ucPrintNomal.xaml.cs">
+      <DependentUpon>ucPrintNomal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="appWindows\ucReport.xaml.cs">
       <DependentUpon>ucReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appWindows\ucSterilizTypeManage.xaml.cs">
+      <DependentUpon>ucSterilizTypeManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appWindows\ucSystemSettings.xaml.cs">
+      <DependentUpon>ucSystemSettings.xaml</DependentUpon>
     </Compile>
     <Compile Include="appWindows\ucUsersManage.xaml.cs">
       <DependentUpon>ucUsersManage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="appWindows\UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
+    <Compile Include="appWindows\ucValiPeriodManage.xaml.cs">
+      <DependentUpon>ucValiPeriodManage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Buttons.xaml.cs">
       <DependentUpon>Buttons.xaml</DependentUpon>
@@ -107,6 +125,7 @@
       <DependentUpon>Dialogs.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\AnotherCommandImplementation.cs" />
+    <Compile Include="Domain\DigitalOnlyValidationRule.cs" />
     <Compile Include="Domain\FutureDateValidationRule.cs" />
     <Compile Include="Domain\iLogInDialog.xaml.cs">
       <DependentUpon>iLogInDialog.xaml</DependentUpon>
@@ -182,6 +201,9 @@
     <Compile Include="TextFields.xaml.cs">
       <DependentUpon>TextFields.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TextFields_2.xaml.cs">
+      <DependentUpon>TextFields_2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transitions.xaml.cs">
       <DependentUpon>Transitions.xaml</DependentUpon>
     </Compile>
@@ -223,17 +245,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="appWindows\ucInstrumentManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="appWindows\ucPackageManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="appWindows\ucPrintExternal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="appWindows\ucPrintNomal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="appWindows\ucReport.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="appWindows\ucSterilizTypeManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="appWindows\ucSystemSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="appWindows\ucUsersManage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="appWindows\UserControl1.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="appWindows\ucValiPeriodManage.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Buttons.xaml">
       <SubType>Designer</SubType>
@@ -288,8 +334,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Home.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="IconPack.xaml">
       <SubType>Designer</SubType>
@@ -350,6 +396,10 @@
     <Page Include="TextFields.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TextFields_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Transitions.xaml">
       <SubType>Designer</SubType>

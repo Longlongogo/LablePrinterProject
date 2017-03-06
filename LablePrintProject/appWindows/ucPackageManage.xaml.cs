@@ -18,15 +18,15 @@ namespace LablePrintProject.appWindows
     /// <summary>
     /// ucUsersManage.xaml 的交互逻辑
     /// </summary>
-    public partial class ucReport : UserControl
+    public partial class ucPackageManage : UserControl
     {
-        public ucReport()
+        public ucPackageManage()
         {
             InitializeComponent();
-            binData();
+            binData1(); 
         }
 
-        private void binData()
+        private void binData1()
         {
             List<object> objList = new List<object>();
             for (int i = 0; i < 200; i += 1)
@@ -59,13 +59,14 @@ namespace LablePrintProject.appWindows
                 });
             }
             dataGrid1.ItemsSource = objList;
-        }
+            dataGrid2.ItemsSource = objList;
+        } 
         /// <summary>
         /// 全选
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ckbSelectedAll_Checked(object sender, RoutedEventArgs e)
+        private void ckb1SelectedAll_Checked(object sender, RoutedEventArgs e)
         {
             this.dataGrid1.SelectAll();
         }
@@ -75,9 +76,28 @@ namespace LablePrintProject.appWindows
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ckbSelectedAll_Unchecked(object sender, RoutedEventArgs e)
+        private void ckb1SelectedAll_Unchecked(object sender, RoutedEventArgs e)
         {
             this.dataGrid1.UnselectAll();
+        }
+        /// <summary>
+        /// 全选
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ckb2SelectedAll_Checked(object sender, RoutedEventArgs e)
+        {
+            this.dataGrid2.SelectAll();
+        }
+
+        /// <summary>
+        /// 全不选
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ckb2SelectedAll_Unchecked(object sender, RoutedEventArgs e)
+        {
+            this.dataGrid2.UnselectAll();
         }
     }
 }

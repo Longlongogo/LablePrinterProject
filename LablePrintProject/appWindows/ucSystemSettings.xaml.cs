@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LablePrintProject.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,14 @@ using System.Windows.Shapes;
 namespace LablePrintProject.appWindows
 {
     /// <summary>
-    /// UserControl1.xaml 的交互逻辑
+    /// ucSystemSettings.xaml 的交互逻辑
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class ucSystemSettings : UserControl
     {
-        public UserControl1()
+        public ucSystemSettings()
         {
             InitializeComponent();
+            DataContext = new TextFieldsViewModel();
         }
     }
 }

@@ -9,7 +9,6 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
                 <!-- throw in some extra colour for our floating action button -->
@@ -20,7 +19,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="16">
             <Grid.ColumnDefinitions>
@@ -33,43 +33,56 @@
                 <Button Style="{StaticResource MaterialDesignFlatButton}"
                         Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}">
                     <StackPanel Orientation="Horizontal">
-                        <materialDesign:PackIcon Kind="Binoculars" />
-                        <TextBlock Margin="8 0 0 0">打开菜单</TextBlock>
+                        <materialDesign:PackIcon Kind="Cards" Width="23" Height="23"/>
+                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">打开菜单</TextBlock>
                     </StackPanel>
                 </Button>
             </StackPanel>
         </Grid>
 
-        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"
+        <Button Style="{DynamicResource MaterialDesignFlatButton}"  
+             Grid.Row="1"  Height="100" Width="150" x:Name="LogInButton" Click="LogInButton_OnClick">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Qqchat" Width="50" Height="50"/>
+                <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">登 录</TextBlock>
+            </StackPanel>
+        </Button>
+        <TextBlock Foreground="{DynamicResource MaterialDesignBodyLight}" TextWrapping="Wrap" Margin="16" VerticalAlignment="Center"></TextBlock>
+
+        <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"
                       HorizontalAlignment="Center"
-                      VerticalAlignment="Bottom"
+                      VerticalAlignment="Center"
                       Margin="0 0 0 32">
             <Grid>
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:Card Width="420" Margin="4 2 8 16" Height="270">
+                    <Button Style="{StaticResource MaterialDesignRaisedButton}" 
+                        materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                        Width="420" Margin="4 2 8 16" Height="200">
                         <Grid VerticalAlignment="Stretch" >
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="100" />
-                                <RowDefinition Height="100" />
-                                <RowDefinition Height="100" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="200" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <!--<Image Source="Resources/NormalPrint.jpeg" Grid.RowSpan="2" StretchDirection="Both" VerticalAlignment="Stretch" Stretch="UniformToFill" />-->
                             <materialDesign:PackIcon Kind="Book" Width="160" Height="160" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <StackPanel  Grid.Column="1">
                                 <TextBlock Grid.Column="1" Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="16 16 16 2">常规标签</TextBlock>
-                                <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBodyLight}"
-                                       VerticalAlignment="Center">常规标签打印！</TextBlock>
+                                <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBody}"
+                                       VerticalAlignment="Center">打印常规标签！</TextBlock>
                             </StackPanel>
-                             
+
                         </Grid>
-                    </materialDesign:Card>
-                    <materialDesign:Card Width="420" Margin="8 2 4 16" Height="270">
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignRaisedButton}" 
+                        materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                        Width="420" Margin="4 2 8 16" Height="200">
                         <Grid VerticalAlignment="Stretch">
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
@@ -80,40 +93,21 @@
                             <materialDesign:PackIcon Kind="Dropbox" Width="160" Height="160" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <StackPanel Grid.Column="1">
                                 <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="16 16 16 8">外来器械</TextBlock>
-                                <TextBlock TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBodyLight}"
-                                           VerticalAlignment="Top">外来器械的标签打印！</TextBlock>
+                                <TextBlock TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBody}"
+                                           VerticalAlignment="Top">打印外来器械的标签！</TextBlock>
                             </StackPanel>
-                            <Border Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Padding="8">
-                                <DockPanel>
-                                    <Button Style="{DynamicResource MaterialDesignFlatButton}" 
-                                            DockPanel.Dock="Right"
-                                            x:Name="LogInButton" Click="LogInButton_OnClick">
-                                        <StackPanel Orientation="Horizontal">
-                                            <materialDesign:PackIcon Kind="Qqchat" />
-                                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">登 录</TextBlock>
-                                        </StackPanel>
-                                    </Button>
-                                    <TextBlock Foreground="{DynamicResource MaterialDesignBodyLight}" TextWrapping="Wrap" Margin="16" VerticalAlignment="Center"></TextBlock>
-                                </DockPanel>
-                            </Border>
+
                         </Grid>
-                    </materialDesign:Card>
+                    </Button>
                 </StackPanel>
             </Grid>
         </ScrollViewer>
-        <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+        <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}"
                                  HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                                 Margin="32" Grid.Row="1" PopupMode ="Click">
+                                 Margin="32" Grid.Row="2" PopupMode ="Click">
             <StackPanel>
-                <Button ToolTip="GitHub" Click="GitHubButton_OnClick">
-                    <materialDesign:PackIcon Kind="GithubCircle" Height="20" Width="20" />
-                </Button>
-                <Button ToolTip="Twitter" Click="TwitterButton_OnClick"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}">
-                    <materialDesign:PackIcon Kind="Twitter" />
-                </Button>
-                <Button ToolTip="Chat" Click="ChatButton_OnClick">
+                 
+                <Button ToolTip="打开官网" Click="ChatButton_OnClick">
                     <!-- mix up the colours by brinking in a named palette (see merged dictionaries at top) -->
                     <Button.Background>
                         <SolidColorBrush Color="{StaticResource GreenPrimary500}" />
@@ -123,13 +117,13 @@
                     </Button.Foreground>
                     <materialDesign:PackIcon Kind="Message" />
                 </Button>
-                <Button ToolTip="Email" Click="EmailButton_OnClick"
+                <Button ToolTip="联系邮箱" Click="EmailButton_OnClick"
                         Background="{DynamicResource SecondaryAccentBrush}"
                         Foreground="{DynamicResource SecondaryAccentForegroundBrush}"
                         >
                     <materialDesign:PackIcon Kind="Email" />
                 </Button>
-                <Button ToolTip="Feel like you want to make a donation?  It would be gratefully received.  Click the button to donate via Pledgie." 
+                <Button ToolTip="登录" 
                         Click="LogInButton_OnClick">
                     <Button.Background>
                         <SolidColorBrush Color="{StaticResource GreenPrimary200}" />
@@ -137,7 +131,7 @@
                     <Button.Foreground>
                         <SolidColorBrush Color="{StaticResource GreenPrimary200Foreground}" />
                     </Button.Foreground>
-                    <materialDesign:PackIcon Kind="Gift" />
+                    <materialDesign:PackIcon Kind="Qqchat" />
                 </Button>
             </StackPanel>
         </materialDesign:PopupBox>

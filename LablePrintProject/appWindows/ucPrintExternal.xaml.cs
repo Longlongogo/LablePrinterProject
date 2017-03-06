@@ -18,9 +18,9 @@ namespace LablePrintProject.appWindows
     /// <summary>
     /// ucUsersManage.xaml 的交互逻辑
     /// </summary>
-    public partial class ucReport : UserControl
+    public partial class ucPrintExternal : UserControl
     {
-        public ucReport()
+        public ucPrintExternal()
         {
             InitializeComponent();
             binData();

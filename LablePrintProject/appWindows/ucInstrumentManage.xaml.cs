@@ -18,9 +18,9 @@ namespace LablePrintProject.appWindows
     /// <summary>
     /// ucUsersManage.xaml 的交互逻辑
     /// </summary>
-    public partial class ucReport : UserControl
+    public partial class ucInstrumentManage : UserControl
     {
-        public ucReport()
+        public ucInstrumentManage()
         {
             InitializeComponent();
             binData();
@@ -33,23 +33,23 @@ namespace LablePrintProject.appWindows
             {
                 objList.Add(new
                 {
-                    ID = "编号" + i.ToString()   //编号
+                    colum1 = "第一列" + i.ToString()   //编号
                     ,
-                    PackageName = "包名称" + i.ToString() //包名称
+                    colum2 = "第二列" + i.ToString() //包名称
                     ,
-                    PrintedCount = "打印数量" + i.ToString()    //打印数量
+                    colum3 = "第三列" + i.ToString()    //打印数量
                     ,
-                    SterilizeDate = "灭菌日期" + i.ToString()   //灭菌日期
+                    colum4 = "第四列" + i.ToString()   //灭菌日期
                     ,
-                    FailDate = "失效日期" + i.ToString()    //失效日期
+                    colum5 = "第五列" + i.ToString()    //失效日期
                     ,
-                    SterilizeType = "灭菌类型" + i.ToString()   //灭菌类型
+                    colum6 = "第六列" + i.ToString()   //灭菌类型
                     ,
-                    LotNO = "锅号锅次" + i.ToString()   //锅号锅次
+                    colum7 = "第七咧" + i.ToString()   //锅号锅次
                     ,
-                    PackEr = "包装人" + i.ToString()  //包装人
+                    colum8 = "第八列" + i.ToString()  //包装人
                     ,
-                    CheckEr = "检查人" + i.ToString() //检查人
+                    colum9 = "第九列" + i.ToString() //检查人
                     ,
                     else1 = "else" + i.ToString() //
                     ,

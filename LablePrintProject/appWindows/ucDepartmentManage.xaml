@@ -62,6 +62,14 @@
         <GroupBox Grid.Column="1" Grid.Row="0" Header="数据" Margin="5 0 5 5"
               Style="{DynamicResource MaterialDesignCardGroupBox}"
               materialDesign:ColorZoneAssist.Mode="PrimaryMid">
+            <GroupBox.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="SortAscending" Height="23" Width="23" VerticalAlignment="Center" />
+                        <TextBlock Margin="8,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignSubheadingTextBlock}" Text="{Binding}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
             <DataGrid Margin="0 0 0 0" ItemsSource="{Binding Items3}" CanUserSortColumns="True" CanUserAddRows="False" AutoGenerateColumns="False"
                 materialDesign:DataGridAssist.CellPadding="13 8 8 8" materialDesign:DataGridAssist.ColumnHeaderPadding="8">
                 <DataGrid.Columns>
@@ -103,8 +111,16 @@
         </GroupBox>
         <GroupBox Grid.Column="1" Grid.Row="1" Header="操作" Margin="5 5 5 0"
               Style="{DynamicResource MaterialDesignCardGroupBox}"
-              materialDesign:ColorZoneAssist.Mode="PrimaryMid" Background="{x:Null}" OpacityMask="Black">
-
+              materialDesign:ColorZoneAssist.Mode="PrimaryMid" Background="{x:Null}" OpacityMask="Black"
+                  >
+            <GroupBox.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Ungroup" Height="23" Width="23" VerticalAlignment="Center" />
+                        <TextBlock Margin="8,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignSubheadingTextBlock}" Text="{Binding}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="70">
                 <Button Name="btnAdd" Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="10 0 10 0"  Width="100" VerticalAlignment="Center"
                     ToolTip="添加部门" materialDesign:RippleAssist.Feedback="#DD000000" Click="btnAdd_Click">

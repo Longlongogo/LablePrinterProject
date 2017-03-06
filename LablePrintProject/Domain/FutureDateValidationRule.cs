@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 namespace LablePrintProject.Domain
 {
-    public class FutureDateValidationRule : ValidationRule
+    public class FutureDateValidationRule : System.Windows.Controls.ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {

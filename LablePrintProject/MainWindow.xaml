@@ -4,6 +4,7 @@
         xmlns:wpfExample="clr-namespace:LablePrintProject"
         xmlns:domain="clr-namespace:LablePrintProject.Domain"
         xmlns:appWindow="clr-namespace:LablePrintProject.appWindows"
+        xmlns:demoWindow="clr-namespace:LablePrintProject.TransitionsDemo"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  
         Title="标签打印软件" Height="800" Width="1100"
@@ -44,8 +45,8 @@
                     <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
                                   DockPanel.Dock="Top"
                                   HorizontalAlignment="Left" Margin="16"
-                                  IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />                    
-                    <ListBox x:Name="DemoItemsListBox" Margin="0 16 0 16" SelectedIndex="0"  
+                                  IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />
+                    <ListBox x:Name="DemoItemsListBox" Margin="0 16 5 16" SelectedIndex="0"  
                              PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp">
                         <ListBox.ItemTemplate>
                             <DataTemplate DataType="domain:DemoItem">
@@ -59,35 +60,27 @@
                         </domain:DemoItem>
                         <domain:DemoItem Name="常规标签">
                             <domain:DemoItem.Content>
-                                <wpfExample:PaletteSelector>
-                                    <wpfExample:PaletteSelector.DataContext>
-                                        <wpfExample:PaletteSelectorViewModel />
-                                    </wpfExample:PaletteSelector.DataContext>
-                                </wpfExample:PaletteSelector>
+                                <appWindow:ucPrintNomal />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
                         <domain:DemoItem Name="外来器械">
                             <domain:DemoItem.Content>
-                                <wpfExample:Buttons />
+                                <appWindow:ucPrintExternal />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
                         <domain:DemoItem Name="器械信息维护">
                             <domain:DemoItem.Content>
-                                <wpfExample:TextFields />
+                                <appWindow:ucInstrumentManage />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
                         <domain:DemoItem Name="消毒包信息维护">
                             <domain:DemoItem.Content>
-                                <wpfExample:Pickers>
-                                    <wpfExample:Pickers.DataContext>
-                                        <wpfExample:PickersViewModel />
-                                    </wpfExample:Pickers.DataContext>
-                                </wpfExample:Pickers>
+                                <appWindow:ucPackageManage />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
                         <domain:DemoItem Name="灭菌方式维护">
                             <domain:DemoItem.Content>
-                                <wpfExample:Sliders />
+                                <appWindow:ucSterilizTypeManage />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
                         <domain:DemoItem Name="科室维护">
@@ -98,8 +91,13 @@
                         <domain:DemoItem Name="人员维护"  >
                             <domain:DemoItem.Content>
                                 <appWindow:ucUsersManage />
-                            </domain:DemoItem.Content> 
-                        </domain:DemoItem> 
+                            </domain:DemoItem.Content>
+                        </domain:DemoItem>
+                        <domain:DemoItem Name="有效期维护"  >
+                            <domain:DemoItem.Content>
+                                <appWindow:ucValiPeriodManage />
+                            </domain:DemoItem.Content>
+                        </domain:DemoItem>
                         <domain:DemoItem Name="报表统计">
                             <domain:DemoItem.Content>
                                 <appWindow:ucReport />
@@ -107,7 +105,7 @@
                         </domain:DemoItem>
                         <domain:DemoItem Name="打印设置">
                             <domain:DemoItem.Content>
-                                <wpfExample:ColorZones />
+                                <appWindow:ucSystemSettings />
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
                         <domain:DemoItem Name="修改密码">
@@ -119,29 +117,40 @@
                                 </wpfExample:Lists>
                             </domain:DemoItem.Content>
                         </domain:DemoItem>
-                        <TextBlock>退出</TextBlock>
+                        <domain:DemoItem Name="test">
+                            <domain:DemoItem.Content>
+                                <wpfExample:Home />
+                            </domain:DemoItem.Content>
+                        </domain:DemoItem>
                     </ListBox>
                 </DockPanel>
             </materialDesign:DrawerHost.LeftDrawerContent>
             <DockPanel>
                 <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                                          Mode="PrimaryMid" DockPanel.Dock="Top">
+                                          Mode="PrimaryMid" DockPanel.Dock="Top" Height="60">
                     <DockPanel>
                         <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
                                       x:Name="MenuToggleButton"/>
                         <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                             <StackPanel>
-                                <Button Content="Hello World" Click="MenuPopupButton_OnClick"/>
-                                <Button Content="Nice Popup" Click="MenuPopupButton_OnClick"/>
-                                <Button Content="Can't Touch This" IsEnabled="False" />
+                                <Button Content="官网" Click="ChatButton_OnClick" />
+                                <Button Content="联系邮箱" Click="EmailButton_OnClick" /> 
                                 <Separator/>
-                                <Button Content="Goodbye" Click="MenuPopupButton_OnClick"/>                                
+                                <Button Content="关于" Click="MenuPopupButton_OnClick"  />
                             </StackPanel>
                         </materialDesign:PopupBox>
+                        <!--<Button Style="{DynamicResource MaterialDesignToolForegroundButton}"  
+                                        DockPanel.Dock="Right"    x:Name="LogInButton" >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Qqchat"/>
+                                <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">登 录</TextBlock>
+                            </StackPanel>
+                        </Button>-->
                         <TextBlock x:Name="tbTitle" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">标签打印软件</TextBlock>
                     </DockPanel>
                 </materialDesign:ColorZone>
-                <ContentControl Margin="16" Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />
+                <ContentControl Margin="0 5 0 5" Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />
+                
             </DockPanel>
         </materialDesign:DrawerHost>
     </materialDesign:DialogHost>

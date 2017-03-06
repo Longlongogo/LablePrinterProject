@@ -7,7 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:domain1="clr-namespace:LablePrintProject.Domain"
              mc:Ignorable="d"               
-             d:DesignHeight="591" d:DesignWidth="851" Loaded="UserControl_Loaded"
+             d:DesignHeight="768" d:DesignWidth="1024" Loaded="UserControl_Loaded"
              d:DataContext="{d:DesignInstance domain:TextFieldsViewModel, d:IsDesignTimeCreatable=False}">
     <UserControl.Resources>
         <ResourceDictionary>
@@ -248,7 +248,7 @@
         </ContentControl>
         <TextBlock Grid.Row="7" Grid.Column="4" Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                    Margin="0 48 0 0">Tight Space Validation</TextBlock>
-        <TextBox Grid.Row="8" Grid.Column="4" Width="20"
+        <TextBox Grid.Row="8" Grid.Column="4" Width="100"
                  materialDesign:ValidationAssist.UsePopup="True"
                  HorizontalAlignment="Left"
                  ToolTip="Use a popup which can escape the bounds of the control where space is limited">

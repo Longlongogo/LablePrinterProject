@@ -27,30 +27,19 @@ namespace LablePrintProject
         {
             InitializeComponent();
         }
-
-        private void GitHubButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://github.com/ButchersBoy/MaterialDesignInXamlToolkit");
-        }
-
-        private void TwitterButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://twitter.com/James_Willock");
-        }
-
+          
         private void ChatButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://gitter.im/ButchersBoy/MaterialDesignInXamlToolkit");
+            Process.Start("http://www.shinva.net/");
         }
 
         private void EmailButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Process.Start("mailto://james@dragablz.net");
+            Process.Start("mailto://shaochenglong@shinva.com");
         }
 
         private void LogInButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            //Process.Start("https://pledgie.com/campaigns/31029");
+        { 
             LogInDialogCommand(null);
         }
 
